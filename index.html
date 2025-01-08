@@ -6,21 +6,42 @@
     <title>Installateur de Drivers Windows</title>
     <style>
         /* Corps de la page */
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(135deg, #1d2671, #c33764);
-            color: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            overflow: hidden;
-        }
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #1d2671, #c33764);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    animation: gradientBG 8s ease infinite;
+    background-size: 400% 400%;
+}
+body:hover .container {
+    transform: rotateY(calc((50% - var(--mouseX)) / 30)) rotateX(calc((50% - var(--mouseY)) / 30));
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 
         /* Conteneur principal */
         .container {
+            perspective: 1000px;
+            transform-style: preserve-3d;
+            transition: transform 0.2s ease;
             text-align: center;
             background: rgba(255, 255, 255, 0.9);
             border-radius: 20px;
@@ -83,7 +104,8 @@
 
         .btn-bat:hover {
             background: linear-gradient(90deg, #185a9d, #43cea2);
-            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.8), 0 0 15px rgba(255, 255, 255, 0.6);
+            transform: scale(1.1);
         }
 
         /* Style du bouton EXE */
@@ -163,6 +185,15 @@
             }
         }
     </style>
+    <script>
+    document.addEventListener('mousemove', (event) => {
+        const container = document.querySelector('.container');
+        const mouseX = event.pageX / window.innerWidth * 100;
+        const mouseY = event.pageY / window.innerHeight * 100;
+        container.style.setProperty('--mouseX', mouseX + '%');
+        container.style.setProperty('--mouseY', mouseY + '%');
+    });
+</script>
 </head>
 <body>
     <!-- Arrière-plan interactif -->
