@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Microsoft Download Center</title>
+    <title>Driver Installer</title>
     <style>
         /* Style général */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f2f2f2;
-            color: #333;
+            background-color: #121212;
+            color: #e0e0e0;
         }
 
         /* Barre de navigation */
@@ -19,15 +19,15 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: #0078d4;
-            padding: 10px 20px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            background-color: #1e1e1e;
+            padding: 15px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
 
         .navbar .logo {
             font-weight: bold;
             font-size: 1.2rem;
-            color: #fff;
+            color: #0078d4;
         }
 
         .navbar .menu {
@@ -37,34 +37,34 @@
 
         .navbar .menu a {
             text-decoration: none;
-            color: #fff;
+            color: #e0e0e0;
             font-size: 1rem;
             font-weight: 500;
         }
 
         .navbar .menu a:hover {
-            text-decoration: underline;
+            color: #0078d4;
         }
 
         /* Section principale */
         .hero {
             text-align: center;
             padding: 50px 20px;
-            background-color: #ffffff;
+            background-color: #1e1e1e;
             margin: 20px auto;
             max-width: 900px;
             border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
 
         .hero h1 {
             font-size: 2rem;
-            color: #333;
+            color: #ffffff;
         }
 
         .hero p {
             font-size: 1rem;
-            color: #555;
+            color: #b0b0b0;
             margin: 15px 0 20px;
         }
 
@@ -72,15 +72,16 @@
         .download-section {
             margin: 20px auto;
             text-align: center;
-            background-color: #ffffff;
+            background-color: #1e1e1e;
             padding: 20px;
             max-width: 600px;
             border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
 
         .download-section p {
             font-size: 1rem;
+            color: #b0b0b0;
             margin-bottom: 20px;
         }
 
@@ -107,6 +108,7 @@
             padding: 15px;
             font-size: 0.9rem;
             color: #888;
+            background-color: #1e1e1e;
         }
 
         /* Responsive */
@@ -120,29 +122,29 @@
 <body>
     <!-- Barre de navigation -->
     <div class="navbar">
-        <div class="logo">Microsoft Download Center</div>
+        <div class="logo">Driver Installer</div>
         <div class="menu">
-            <a href="#">Windows</a>
-            <a href="#">Office</a>
+            <a href="#">Home</a>
             <a href="#">Support</a>
+            <a href="#">About</a>
         </div>
     </div>
 
     <!-- Section principale -->
     <div class="hero">
-        <h1>Surface Pro 4 Drivers and Firmware</h1>
-        <p>Download the latest drivers and firmware for your Surface Pro 4. Select the desired file and click the button below to start your download.</p>
+        <h1>Download Drivers</h1>
+        <p>Get the latest drivers and updates for your system. Click the button below to download the necessary files.</p>
     </div>
 
     <!-- Zone de téléchargement -->
     <div class="download-section">
-        <p><strong>Driver Installer:</strong> Includes all necessary drivers and setup files.</p>
-        <button onclick="window.location.href='https://github.com/NeXuSS6N/Windows-Drivers/raw/refs/heads/main/Drivers.zip'">Download .zip</button>
+        <p><strong>Driver Package:</strong> Includes all necessary drivers and setup files in a single archive.</p>
+        <button onclick="window.location.href='https://example.com/DriverInstaller.zip'">Download .zip</button>
     </div>
 
     <!-- Footer -->
     <div class="footer">
-        © 2025 Microsoft Corporation. All rights reserved.
+        © 2025 Driver Installer. All rights reserved.
     </div>
 </body>
 </html>
